@@ -1,0 +1,14 @@
+image: maven:3.3.9
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - maven
+        script: 
+          - mvn package
+          - docker login -u $DOCKER_USER_NAME -p $DOCKER_PASS
+          - docker build -t kuldeep99/testpipeline:latest .
+          - docker push kuldeep99/testpipeline:latest        
+options:
+  docker: true
