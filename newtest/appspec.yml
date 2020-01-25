@@ -5,6 +5,6 @@ files:
     destination: /home/ec2-user
 hooks:
   ApplicationStart:
-    - location: java -jar springtest.jar
+    - location: start_server.sh
       timeout: 300
       runas: root
