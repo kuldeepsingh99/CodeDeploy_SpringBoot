@@ -7,16 +7,16 @@ files:
 permissions:
   - object: /
     pattern: "**"
-    owner: ubuntu
-    group: ubuntu
+    owner: root
+    group: root
     
 hooks:
   ApplicationStop:
     - location: stop_server.sh
       timeout: 20
-      runas: ubuntu
+      runas: root
   ApplicationStart:
     - location: start_server.sh
       timeout: 300
-      runas: ubuntu
+      runas: root
       
