@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: springtest.jar
+    destination: /home/ec2-user
+hooks:
+  ApplicationStart:
+    - location: java -jar springtest.jar
+      timeout: 300
+      runas: root
