@@ -2,21 +2,21 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /opt/ec2-user/server
+    destination: /opt/ubuntu/server
 
 permissions:
   - object: /
     pattern: "**"
-    owner: root
-    group: root
+    owner: ubuntu
+    group: ubuntu
     
 hooks:
   ApplicationStop:
     - location: stop_server.sh
       timeout: 20
-      runas: root
+      runas: ubuntu
   ApplicationStart:
     - location: start_server.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
       
