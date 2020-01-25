@@ -1,10 +1,11 @@
 version: 0.0
 os: linux
 files:
-  - source: ./target/springtest.jar
-    destination: /tmp
+  - source: /
+    destination: /opt/ec2-user/server
 hooks:
   ApplicationStart:
     - location: start_server.sh
       timeout: 300
+      runas: ubuntu
       
