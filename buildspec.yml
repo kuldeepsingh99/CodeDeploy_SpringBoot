@@ -2,11 +2,8 @@ version: 0.2
 
 phases:
     install:
-        commands:
-          - echo "Entering install phase..."
-          - wget http://mirror.olnevhost.net/pub/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
-          - sudo tar xzvf apache-maven-3.3.9-bin.tar.gz -C /opt/
-          - export PATH=/opt/apache-maven-3.3.9/bin:$PATH
+       runtime-versions:
+           java: openjdk8
     pre_build:
         commands:
             - echo "Pre_build"
