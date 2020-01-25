@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 
-sudo killall java
-exit 0
+# Kill Java process
+
+# Determine the pid
+PID=`ps -C java -o pid=`
+
+kill -9 $PID
