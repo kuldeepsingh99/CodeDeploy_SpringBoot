@@ -12,10 +12,6 @@ permissions:
     mode:777
     
 hooks:
-  ApplicationStop:
-    - location: stop_server.sh
-      timeout: 20
-      runas: root
   ApplicationStart:
     - location: start_server.sh
       timeout: 300
