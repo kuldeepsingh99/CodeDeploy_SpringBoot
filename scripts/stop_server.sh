@@ -12,3 +12,6 @@ if [ -n "$PID" ]; then
 else
     echo "empty"
 fi
+
+cd /opt
+rm -rf root
