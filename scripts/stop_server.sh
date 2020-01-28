@@ -3,6 +3,7 @@
 # Kill Java process
 
 # Determine the pid
+echo "killing process starts"
 PID=`ps -C java -o pid=`
 
 if [ -n "$PID" ]; then
