@@ -14,4 +14,4 @@ else
 fi
 
 cd /opt
-rm -rf root
+rm -rf tmp
