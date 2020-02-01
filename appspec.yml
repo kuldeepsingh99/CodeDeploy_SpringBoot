@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /opt/root/server
+    destination: /opt/tmp/server
 
 permissions:
   - object: /
     pattern: "**"
-    owner: root
-    group: root
+    owner: ubuntu
+    group: ubuntu
     
 hooks:
   ApplicationStop:
