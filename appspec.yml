@@ -4,12 +4,7 @@ files:
   - source: /
     destination: /opt/tmp/server
 
-permissions:
-  - object: /
-    pattern: "**"
-    owner: ubuntu
-    group: ubuntu
-    
+  
 hooks:
   ApplicationStop:
     - location: scripts/stop_server.sh
